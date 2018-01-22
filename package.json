@@ -1,0 +1,23 @@
+{
+  "name": "nuggetsoffreedom",
+  "version": "1.0.0",
+  "description": "Project 2 Try 3",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherhanten/nuggetsOfFreedom.git"
+  },
+  "author": "chanten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopherhanten/nuggetsOfFreedom/issues"
+  },
+  "homepage": "https://github.com/christopherhanten/nuggetsOfFreedom#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
