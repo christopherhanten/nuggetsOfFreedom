@@ -4,8 +4,7 @@
 function seedEvents(req, res) {
   // create some events
   const events = [
-    { date: 'Jan 22', nugget: 'He that pities another remembers himself.
-' },
+    { date: 'Jan 22', nugget: 'He that pities another remembers himself.' },
     { date: 'Jan 23', nugget: 'He that is angry without a cause, must me satisfied without amends.' },
     { date: 'Jan 24', nugget: 'One pair of heels is often worth two pairs of hands.' },
     { date: 'Jan 25', nugget: 'A blind man will not thank you for a looking glass.' }
