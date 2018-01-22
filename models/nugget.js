@@ -1,4 +1,5 @@
 let mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/nuggetsoffreedom');
 
 //Nugget schema
 let nuggetSchema = mongoose.Schema({
@@ -12,4 +13,4 @@ let nuggetSchema = mongoose.Schema({
   }
 });
 
-let Nuggets = module.exports = mongoose.model('nuggets', nuggetSchema);
+module.exports = mongoose.model('Nugs', nuggetSchema);

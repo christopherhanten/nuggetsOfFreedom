@@ -9,6 +9,9 @@ const mongoose  = require('mongoose');
 mongoose.connect('mongodb://localhost/nuggetsoffreedom');
 let db = mongoose.connection;
 
+//Init App
+const app     = express();
+
 //Check connection
 db.once('open', function(){
   console.log('Connected to MongoDb');
@@ -18,9 +21,6 @@ db.once('open', function(){
 db.on('error', function(err) {
   console.log(err);
 });
-
-//Init App
-const app     = express();
 
 //Bring in models
 let Nugget    = require('./models/nugget');
@@ -35,10 +35,12 @@ app.get('/', function(req, res) {
   //   if(err){
   //     console.log(err);
   //   } else{
-      res.render('index')
-  // };
+
 });
 // });
+//   // };
+// });
+// // });
 
 //Add routes
 //About
