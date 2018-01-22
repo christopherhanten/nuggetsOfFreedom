@@ -1,11 +1,29 @@
 //console.log('Hello World');
 
 
-const express = require('express');
-const path    = require('path');
+const express   = require('express');
+const path      = require('path');
+const mongoose  = require('mongoose');
+
+//Connect Mongoose
+mongoose.connect('mongodb://localhost/nuggetsoffreedom');
+let db = mongoose.connection;
+
+//Check connection
+db.once('open', function(){
+  console.log('Connected to MongoDb');
+});
+
+//check for db errors
+db.on('error', function(err) {
+  console.log(err);
+});
 
 //Init App
 const app     = express();
+
+//Bring in models
+let Nugget    = require('./models/nugget');
 
 //Load view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -13,8 +31,15 @@ app.set('view engine', 'ejs');
 
 //Home route
 app.get('/', function(req, res) {
-  res.render('index')
+  // Nuggets.find({}, function(err, nugget){
+  //   if(err){
+  //     console.log(err);
+  //   } else{
+      res.render('index')
+  // };
 });
+// });
+
 //Add routes
 //About
 app.get('/about', function(req, res) {
